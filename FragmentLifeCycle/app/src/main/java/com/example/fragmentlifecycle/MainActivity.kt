@@ -1,41 +1,27 @@
-package com.example.multiscreen
+package com.example.fragmentlifecycle
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.FragmentManager
 
-class SecondActivity : AppCompatActivity() {
-
-    lateinit var txtView1: TextView
-    lateinit var txtView2: TextView
-
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_second)
+        setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        txtView1=findViewById<TextView>(R.id.txtView1)
-        txtView2=findViewById<TextView>(R.id.txtView2)
-
-        val name=intent.getStringExtra("name")
-        val age=intent.getIntExtra("age",0).toString()
-
-        txtView1.setText(name)
-        txtView2.setText(age)
-
-
-
+        val firstFragmentManager: FragmentManager= supportFragmentManager
+        val firstFragmentTransaction= firstFragmentManager.beginTransaction()
+        firstFragmentTransaction.add(R.id.frame, FirstFragment())
+        firstFragmentTransaction.commit()
 
     }
-
-
 }

@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("age",ageData)
             startActivity(intent)
 
+
             //Toast.makeText(this, "Name: $nameData, Age: $ageData", Toast.LENGTH_SHORT).show()
 
         }
