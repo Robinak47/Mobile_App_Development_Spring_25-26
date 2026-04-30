@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddProduct">
+
+    <TextView
+        android:id="@+id/codeTB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="34dp"
+        android:text="code"
+        app:layout_constraintBottom_toTopOf="@+id/nameTB"
+        app:layout_constraintStart_toStartOf="@+id/nameTB" />
+
+    <TextView
+        android:id="@+id/nameTB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="52dp"
+        android:text="name"
+        app:layout_constraintBottom_toTopOf="@+id/catagoryTB"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/catagoryTB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="43dp"
+        android:text="catagory"
+        app:layout_constraintEnd_toStartOf="@+id/catagoryTf"
+        app:layout_constraintTop_toTopOf="@+id/catagoryTf" />
+
+    <TextView
+        android:id="@+id/quantityTB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="37dp"
+        android:text="quantity"
+        app:layout_constraintBottom_toTopOf="@+id/priceTf"
+        app:layout_constraintEnd_toStartOf="@+id/quantityTf" />
+
+    <TextView
+        android:id="@+id/priceTB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="11dp"
+        android:text="price"
+        app:layout_constraintBottom_toBottomOf="@+id/priceTf"
+        app:layout_constraintEnd_toEndOf="@+id/nameTB"
+        app:layout_constraintStart_toStartOf="@+id/submitBtn" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:text="submit"
+        app:layout_constraintEnd_toStartOf="@+id/priceTf"
+        app:layout_constraintStart_toStartOf="@+id/nameTB"
+        app:layout_constraintTop_toBottomOf="@+id/priceTf" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="36dp"
+        android:text="reset"
+        app:layout_constraintEnd_toEndOf="@+id/priceTf"
+        app:layout_constraintTop_toBottomOf="@+id/priceTf" />
+
+    <EditText
+        android:id="@+id/codeTF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameTf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/codeTF"
+        app:layout_constraintTop_toBottomOf="@+id/codeTF" />
+
+    <EditText
+        android:id="@+id/catagoryTf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTf" />
+
+    <EditText
+        android:id="@+id/quantityTf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/quantityTB"
+        app:layout_constraintEnd_toEndOf="@+id/catagoryTf" />
+
+    <EditText
+        android:id="@+id/priceTf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="41dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/catagoryTf" />
+</androidx.constraintlayout.widget.ConstraintLayout>
